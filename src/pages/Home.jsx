@@ -51,7 +51,7 @@ const Home = () => {
           <Typography variant="h5" color="blue-gray" className='mb-4'>
             Selected Products
           </Typography>
-      <ul className='flex flex-col gap-5'>
+      <ul className='flex flex-col gap-6'>
             {
                 cart && cart.map((cartEl)=> {
                     return(
@@ -73,14 +73,12 @@ const Home = () => {
     
         <div className='w-full max-w-6xl mx-auto px-5 py-8'>
             <h2 className='text-4xl text-center mb-6 text-blue-600'>Products:</h2>
-            <ul className='grid grid-cols-4  gap-7'>
+            <ul className='grid grid-cols-1 lg:grid-cols-4  gap-7'>
                 {
                     products && products.map((product) => {
                         return (
                             <li key={product.id} className='border-2 border-black/20 rounded-lg'>
-                
                                 <img src={product.image} alt="something went wrong" className='w-full h-64' />
-                                
                                 <div className="p-5 flex flex-col justify-between h-auto">
                                     <h3 className='font-semibold mb-2'>{product.title.split(" ").slice(0, 2).join(" ")}</h3>
                                     <p><span className='font-semibold mb-2'>Price:</span>{product.price}$</p>
